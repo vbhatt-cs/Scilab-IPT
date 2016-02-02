@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+<!--Begin Entities-->
+<!ENTITY a9115d0dbb193c25782fb4acd83361d76 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/blur.xml">
+<!ENTITY a550f04283c97684023bc9c3fd303083f SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/canny.xml">
+<!ENTITY ae994b2ed02493266fe84a25ed24ad6e3 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/cornerEigenValAndVecs.xml">
+<!ENTITY ac9e6c0076fcd81525525eb3835805bc6 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/cornerHarris.xml">
+<!ENTITY a5fc984ce5b806e4ac2545a81eecfabec SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/filter2D.xml">
+<!ENTITY a1dcb9ef998a3b08d987f8fbc57945bd7 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/gaussianblur.xml">
+<!ENTITY a19ced068ba408a743ab192c6cb43728c SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/getTextSize.xml">
+<!ENTITY a2699a8cb8c8cdfacbf4da46767112a42 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/houghlines.xml">
+<!ENTITY ab0ea9b8df907f35673feeedddd9f70e9 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/houghlinesp.xml">
+<!ENTITY a5fc3797235471c75d275ab0f0dedd22d SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/im2double.xml">
+<!ENTITY a7135377820e99e9b1dd0aca056ceba50 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/imcontrast.xml">
+<!ENTITY a56f5d811e03a4103a8e6f61e50dba070 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/imcrop.xml">
+<!ENTITY ac786571fdf4ab402d59c646b6d1ddb44 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/imread.xml">
+<!ENTITY a28efdbd5eb4c3708f390a4d8e4f640c0 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/imresize.xml">
+<!ENTITY ab5de66ceb9f79bfbd424dbe3e41ef7b2 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/imsharpen.xml">
+<!ENTITY a8820bc32ca8bdc89c12da0755f7615aa SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/imwrite.xml">
+<!ENTITY af434c3939f2c286db42857065790de16 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/montage.xml">
+<!ENTITY ad885f800cef75ed62a0166781ba60948 SYSTEM "/home/virtualgod/Desktop/Scilab-IPT-master-master/help/en_US/undistort.xml">
+<!--End Entities-->
+]>
+<book version="5.0-subset Scilab" xml:lang="en_US"
+      xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:mml="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:db="http://docbook.org/ns/docbook">
+  <info xml:id='image_processing_toolbox_manual'>
+    <title>Image Processing Toolbox</title>
+  </info>
+
+<part xml:id='section_fbe67b085ccd321b9e62edee86cb2f89'>
+<title>Image Processing Toolbox</title>
+&a9115d0dbb193c25782fb4acd83361d76;
+&a550f04283c97684023bc9c3fd303083f;
+&ae994b2ed02493266fe84a25ed24ad6e3;
+&ac9e6c0076fcd81525525eb3835805bc6;
+&a5fc984ce5b806e4ac2545a81eecfabec;
+&a1dcb9ef998a3b08d987f8fbc57945bd7;
+&a19ced068ba408a743ab192c6cb43728c;
+&a2699a8cb8c8cdfacbf4da46767112a42;
+&ab0ea9b8df907f35673feeedddd9f70e9;
+&a5fc3797235471c75d275ab0f0dedd22d;
+&a7135377820e99e9b1dd0aca056ceba50;
+&a56f5d811e03a4103a8e6f61e50dba070;
+&ac786571fdf4ab402d59c646b6d1ddb44;
+&a28efdbd5eb4c3708f390a4d8e4f640c0;
+&ab5de66ceb9f79bfbd424dbe3e41ef7b2;
+&a8820bc32ca8bdc89c12da0755f7615aa;
+&af434c3939f2c286db42857065790de16;
+&ad885f800cef75ed62a0166781ba60948;
+</part>
+</book>
