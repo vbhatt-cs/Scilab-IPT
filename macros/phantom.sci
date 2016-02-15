@@ -36,7 +36,6 @@
 //1) Shepp, Larry; B. F. Logan (1974). "The Fourier Reconstruction of a Head Section". IEEE Transactions on Nuclear Science. NS-21 (3): 21–43.
 //2) P. A. Toft, "The Radon Transform, Theory and Implementation", p. 201
 
-endfunction
 function [p,ellipse]=phantom(varargin)
     narg=argn(2);
     
