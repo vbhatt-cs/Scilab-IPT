@@ -36,18 +36,18 @@ function [F,obeta,otheta]=fanbeam(varargin)
         error("Invalid input. 2 to 8 parameters required.");
     end
     
-    if(modulo(narg,2)!=0) then
+    if(modulo(narg,2)~=0) then
         error("Invalid number of arguments.");
     end
         
     I=varargin(1);
     d=varargin(2);
     
-    if(type(I)!=1 & type(I)!=4) then //Not numerical or boolean matrix
+    if(type(I)~=1 & type(I)~=4) then //Not numerical or boolean matrix
         error("Invalid image type.");
     end
     
-    if(!isscalar(d) | d<0) then
+    if(~isscalar(d) | d<0) then
         error("Invalid distance.");
     end
     
@@ -84,5 +84,5 @@ function [F,obeta,otheta]=fanbeam(varargin)
     
     P=radon(I,0:0.5:179.5); //Radon transform of I.
     
-    [F,obeta,otheta]=para2fan(P,d,"FanSensorGeometry",fanSensorGeometry,"FanSensorSpacing",fanSensorSpacing,"FanRotationIncrement",fanRotationIncrement,"Interpolation","pchip");
+    [F,obeta,otheta]=para2fan(P,d,"FanSensorGeometry",fanSensorGeometry,"FanSensorSpacing",fanSensorSpacing,"FanRotationIncrement",fanRotationIncrement);
 endfunction
