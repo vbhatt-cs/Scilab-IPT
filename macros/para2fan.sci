@@ -63,7 +63,7 @@ function [F,ogamma,otheta]=para2fan(varargin)
         error("Invalid number of arguments.");
     end
         
-    I=varargin(1);
+    P=varargin(1);
     d=varargin(2);
     
     if(type(I)~=1 & type(I)~=4) then //Not numerical or boolean matrix
@@ -197,7 +197,7 @@ function [F,ogamma,otheta]=para2fan(varargin)
     else //Half cycle
         dpthetaDeg=180/n;
     end
-    ptheta=dpthetaDeg*(0:n-1);
+    pthetaDeg=dpthetaDeg*(0:n-1);
     
     //Default value of fan rotation increment
     if(isempty(fanRotationIncrement)) then
@@ -209,15 +209,15 @@ function [F,ogamma,otheta]=para2fan(varargin)
     
     if(fanCoverage=="minimal") then
         fudge=n*180*%eps;
-        thetaDeg=[-gammaMax+fudge:dthetaDeg:180-gammaMin-fudge];
+        thetaDeg=[-gammaMax+fudge:fanRotationIncrement:180-gammaMin-fudge];
         thetaDegMin=min(thetaDeg);
         thetaDegMax=max(thetaDeg);
-        thetaDeg=[thetaDegMin-dthetaDeg thetaDeg thetaDegMax+dthetaDeg];
+        thetaDeg=[thetaDegMin-fanRotationIncrement thetaDeg thetaDegMax+fanRotationIncrement];
     else
-        if(modulo(360,dthetaDeg)~=0) then
-            error("360 should be a multiple of dthetaDeg");
+        if(modulo(360,fanRotationIncrement)~=0) then
+            error("360 should be a multiple of fanRotationIncrement");
         end
-        thetaDeg=0:dthetaDeg:(360-dthetaDeg);
+        thetaDeg=0:fanRotationIncrement:(360-fanRotationIncrement);
     end
     
     numelGamma=prod(size(gammaDeg));
@@ -241,8 +241,20 @@ function [F,ogamma,otheta]=para2fan(varargin)
     gammaRange=gammaMax-gammaMin;
     pthetamask=pthetapad>=(360-gammaRange);
     pthetamask2=pthetapad<=gammaRange;
+    
     Ppad=[Ppad(:,pthetamask) Ppad Ppad(:,pthetamask2)];
-    pthetapad=[pthetapad(pthetamask)-360 pthetapad pthetapad(pthetamask2)+360];
+    
+    padL=pthetapad(pthetamask);
+    if(~isempty(padL)) then
+        padL=padL-360;
+    end
+        
+    padR=pthetapad(pthetamask2);
+    if(~isempty(padR)) then
+        padR=padR+360;
+    end
+        
+    pthetapad=[padL pthetapad padR];
     
     //Shift and Interpolate rotation angles
     numelThetaDeg=prod(size(thetaDeg));
