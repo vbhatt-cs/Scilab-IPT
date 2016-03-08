@@ -3,7 +3,7 @@
 //Para2fan function converts parallel-beam projects to fan-beam.
 //    
 //Input parameters:
-//P - Parallel-beam data. Should be numeric or boolean matrix.
+//P - Parallel-beam data. Should be numeric matrix.
 //D - Distance from fan-beam vertex to the center of rotation that was used to obtain
 //    projections (in pixels)
 //    (type - positive scalar)
@@ -66,8 +66,8 @@ function [F,ogamma,otheta]=para2fan(varargin)
     P=varargin(1);
     d=varargin(2);
     
-    if(type(I)~=1 & type(I)~=4) then //Not numerical or boolean matrix
-        error("Invalid image type.");
+    if(type(I)~=1) then //Not numerical matrix
+        error("Invalid parallel beam data.");
     end
     
     if(~isscalar(d) | d<0) then
