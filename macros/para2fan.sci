@@ -66,7 +66,7 @@ function [F,ogamma,otheta]=para2fan(varargin)
     P=varargin(1);
     d=varargin(2);
     
-    if(type(I)~=1) then //Not numerical matrix
+    if(type(P)~=1) then //Not numerical matrix
         error("Invalid parallel beam data.");
     end
     
@@ -142,7 +142,7 @@ function [F,ogamma,otheta]=para2fan(varargin)
             elseif(varargin(i+1)=="spline") then
                 interpolation="spline";
             else
-                error("Invalid interpolation argument. Should be nearest, linear, spline or cubic.");
+                error("Invalid interpolation argument. Should be nearest, linear or spline.");
             end
         end
     end
